@@ -1,0 +1,18 @@
+{
+  "name": "simple-elasticbeanstalk",
+  "version": "1.0.0",
+  "description": "Simple NodeJS app deployable to AWS ElasticBeanstalk",
+  "main": "server.js",
+  "private": true,
+  "engines": {
+    "node": ">=16.17.0 <17.0.0",
+    "npm": ">=8.19.2 <9.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepackage": "rm -f *.zip",
+    "package": "zip -vr \"$(basename $(pwd))-$(date +%s).zip\" ./ -x .DS_Store -x .gitignore -x '*.git*'"
+  },
+  "author": "riojack <riojack@users.noreply.github.com>",
+  "license": "ISC"
+}
